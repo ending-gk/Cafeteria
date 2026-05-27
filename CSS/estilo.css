@@ -3,23 +3,79 @@ header{
     display:grid;
     grid-template-columns: repeat(12, 1fr);
     background-color: #c08856;
-    
+    padding: 15px ;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
 .titulo{
-    
     text-align: center;
     grid-column: 7/8;
-    color: #6a3a20;
-    font-family: 'Times New Roman', serif;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size:  30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 #menu{
     grid-column: 1/2;
-    background-color: transparent;}
+    background-color: transparent;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#menu:hover{
+    background-color: #fff;
+    color: #c08856;
+}
+
 #login{
     grid-column: 10/11;
     background-color: transparent;
+    color: #fff;
+    transition: 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+#login:hover{
+    background-color: #fff;
+    color: #c08856;
+}
+
 #tema{
     grid-column: 13;
 }
+
+#tema:hover{
+    background-color: #fff;
+    color: #c08856;
+}
+
+.carousel-item img {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+button:hover, .btn-primary:hover {
+  background-color: #c08856;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+  flex: 1; 
+}
+
+footer {
+  background-color: #c08856;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+}   
