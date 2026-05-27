@@ -54,6 +54,14 @@ header{
     object-fit: cover;
 }
 
+.saibamais {
+    color: #6a3a20;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.3s;
+}
+
+
 button:hover, .btn-primary:hover {
   background-color: #c08856;
 }
@@ -78,4 +86,5 @@ footer {
   padding: 15px 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
  
-}   
+} 
+
