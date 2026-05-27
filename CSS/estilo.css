@@ -1,17 +1,25 @@
 header{
     position: relative;
-    display:flex;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
     background-color: #c08856;
     
 }
-header h1{
+.titulo{
+    
+    text-align: center;
+    grid-column: 7/8;
     color: #6a3a20;
     font-family: 'Times New Roman', serif;
     font-size:  30px;
 }
-button{
+#menu{
+    grid-column: 1/2;
+    background-color: transparent;}
+#login{
+    grid-column: 10/11;
     background-color: transparent;
-    
-    
+}
+#tema{
+    grid-column: 13;
 }
