@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 header{
     position: relative;
     display:grid;
@@ -86,5 +87,39 @@ footer {
   padding: 15px 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
  
+}
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;    
+    height: 100vh;    
+    background-color: #a0714f;
+    padding: 40px 0 40px 1%;
+    }
+.menu{
+    width: 100%;
+    padding-left: 10px;
+}   
+.menu>i{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;   
+}
+ul li.item_menu a{
+    display: flex;
+    color: white;
+    text-decoration:none ;
+    font-size: 20px;
+    padding: 20px 4%;
+    margin-bottom: 20px;
+}
+ul li.item_menu a .texto_menu{
+     margin-left: 30px;
 } 
 
