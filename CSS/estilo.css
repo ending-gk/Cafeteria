@@ -15,7 +15,7 @@ header{
     font-size:  30px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
-#menu{
+.menu{
     grid-column: 1/2;
     background-color: transparent;
     color: #fff;
@@ -92,10 +92,14 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;    
+    width: 80px;    
     height: 100vh;    
     background-color: #a0714f;
-    padding: 40px 0 40px 1%;
+    padding: 40px 0 40px ;
+    box-shadow: 3px 0 0 #fff;
+    position: fixed;
+    overflow: hidden;
+    transition: 1s;
     }
 .menu{
     width: 100%;
@@ -116,10 +120,39 @@ ul li.item_menu a{
     color: white;
     text-decoration:none ;
     font-size: 20px;
-    padding: 20px 4%;
-    margin-bottom: 20px;
+    padding: 20px 1%;
+    margin-bottom: 60px;
+    line-height: 40px;
+    
 }
 ul li.item_menu a .texto_menu{
-     margin-left: 30px;
+     margin-left: 70px;
+     transition: 1s;
+     opacity: 0;
+
 } 
+
+ul li.item_menu a .icon > i{
+    font-size: 30px;
+}
+ul li.item_menu a{
+    transition: .5s;
+}
+ul li.item_menu:hover a {
+    background-color: #fff;
+    color: #6a3a20;
+    
+}
+.menu-lateral.expandir{
+    width: 300px;
+}
+ul li.ativo {
+    background-color: #fff;
+}
+
+.menu-lateral.expandir .texto_menu{
+    margin-left: 40px;
+    opacity: 1;
+
+}
 
