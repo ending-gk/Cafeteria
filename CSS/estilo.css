@@ -148,6 +148,60 @@ ul li.ativo {
     opacity: 1;
 
 }
+@media (max-width: 768px) {
+    .menu-lateral {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
 
+    .menu-lateral ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex: 1;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-lateral.expandir {
+        width: 100%;
+        height: 200px;
+    }
+
+    .menu-lateral.expandir ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    ul li.item_menu a {
+        margin-bottom: 10px;
+        padding: 5px 1px;
+    }
+
+    header {
+        padding-left: 80px;
+    }
+
+    main {
+        margin-top: 60px;
+        margin-left: 0;
+    }
+    .menu-lateral.expandir ul li.item_menu a {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+ul li.item_menu a .icon > i {
+        font-size: 20px;
+    }
+}
 
 
