@@ -62,12 +62,6 @@ header{
     transition: 0.3s;
 }
 
-
-button:hover, .btn-primary:hover {
-  background-color: #c08856;
-}
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -96,7 +90,6 @@ footer {
     height: 100vh;    
     background-color: #a0714f;
     padding: 40px 0 40px ;
-    box-shadow: 3px 0 0 #fff;
     position: fixed;
     overflow: hidden;
     transition: 1s;
@@ -155,4 +148,6 @@ ul li.ativo {
     opacity: 1;
 
 }
+
+
 
