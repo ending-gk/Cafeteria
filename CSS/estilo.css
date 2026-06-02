@@ -165,6 +165,23 @@ ul li.ativo {
     z-index: 500;
     background-color: rgba(49, 47, 47,0.5);
 }
+.tema{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.tema > i{
+    font-size: 20px;
+}
 
 
 
