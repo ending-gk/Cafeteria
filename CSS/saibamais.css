@@ -1,11 +1,17 @@
+:root{
+    --cor-header_footer:#c08856 ;
+    --cor-menu-lateral:#a0714f;
+    --cor-texto:#fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
 body{
-    background-color: rgba(206, 167, 140, 0.658);
+    background-color:var(--cor-body);
 }
 
 header{
     text-align: center;
     grid-column: 7/8;
-    color: #fff;
+    color: var(--cor-texto);
     font-family: cursive;
     font-size:  30px;
     background-color: #c08856;
@@ -17,7 +23,7 @@ header{
 }
 
 h4, h5{
-    color:#fff;
+    color: var(--cor-texto);
     font-family: cursive;
 }
 
@@ -29,7 +35,7 @@ p{
 
 footer {
   background-color: #c08856;
-  color: #fff;
+  color: var(--cor-texto);
   font-size: 18px;
   text-align: center;
   padding: 15px 0;

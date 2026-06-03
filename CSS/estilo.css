@@ -1,52 +1,63 @@
+* {
+    transition: background-color 1.5s, color 1.5s;
+}
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+:root{
+    --cor-header_footer:#c08856 ;
+    --cor-menu-lateral:#a0714f;
+    --cor-saibamais:#6a3a20;
+    --cor-texto:#fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
 header{
     position: relative;
     display:grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: #c08856;
+    background-color: var(--cor-header_footer);
     padding: 15px ;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
 .titulo{
     text-align: center;
-    grid-column: 7/8;
-    color: #fff;
+    grid-column: 6/8;
+    color: var(--cor-texto);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size:  30px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin-right: 20px;
 }
 .menu{
     grid-column: 1/2;
     background-color: transparent;
-    color: #fff;
+    color: var(--cor-texto);
     transition: 0.3s;
 }
 
 #menu:hover{
-    background-color: #fff;
-    color: #c08856;
+    background-color:var(--cor-texto);
+    color: var(--cor-header_footer)
 }
 
 #login{
     grid-column: 10/11;
     background-color: transparent;
-    color: #fff;
+    color: var(--cor-texto);
     transition: 0.3s;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #login:hover{
-    background-color: #fff;
-    color: #c08856;
+    background-color: var(--cor-texto);
+    color: var(--cor-header_footer)
 }
 
 #tema{
-    grid-column: 13;
+    grid-column: 12/13;
 }
 
 #tema:hover{
-    background-color: #fff;
-    color: #c08856;
+    background-color: var(--cor-texto);
+    color: var(--cor-header_footer)
 }
 
 .carousel-item img {
@@ -56,7 +67,7 @@ header{
 }
 
 .saibamais {
-    color: #6a3a20;
+    color: var(--cor-saibamais);
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     transition: 0.3s;
@@ -64,6 +75,7 @@ header{
 
 body {
     display: flex;
+    background-color: var(--cor-body);
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
@@ -74,8 +86,8 @@ main {
 }
 
 footer {
-  background-color: #c08856;
-  color: #fff;
+  background-color: var(--cor-header_footer);
+  color: var(--cor-texto);
   font-size: 18px;
   text-align: center;
   padding: 15px 0;
@@ -88,7 +100,8 @@ footer {
     left: 0;
     width: 80px;    
     height: 100vh;    
-    background-color: #a0714f;
+    background-color: var(--cor-menu-lateral);
+
     padding: 40px 0 40px ;
     position: fixed;
     overflow: hidden;
@@ -100,7 +113,7 @@ footer {
     padding-left: 10px;
 }   
 .menu>i{
-    color: #fff;
+    color: var(--cor-texto);
     font-size: 24px;
     cursor: pointer;
 }
@@ -111,7 +124,7 @@ ul{
 }
 ul li.item_menu a{
     display: flex;
-    color: white;
+    color: var(--cor-texto);
     text-decoration:none ;
     font-size: 20px;
     padding: 20px 1%;
@@ -133,8 +146,8 @@ ul li.item_menu a{
     transition: .5s;
 }
 ul li.item_menu:hover a {
-    background-color: #fff;
-    color: #6a3a20;
+    background-color: var(--cor-texto);
+    color: var(--cor-saibamais)
     
 }
 .menu-lateral.expandir {
@@ -147,7 +160,7 @@ ul li.item_menu:hover a {
     
 }
 ul li.ativo {
-    background-color: #fff;
+    background-color: var(--cor-texto);
 }
 
 .menu-lateral.expandir .texto_menu{
@@ -166,22 +179,29 @@ ul li.ativo {
     background-color: rgba(49, 47, 47,0.5);
 }
 .tema{
-    padding: 10px 20px;
+    padding: 1px 1px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 25px;
     background-color: transparent;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     display: flex;
     transition: 0.3s;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
-.tema > i{
-    font-size: 20px;
+.tema i{
+    font-size: 25px;
 }
+.claro-icone{
+    display: block;
+    transition: 1.5s;
 
-
+}
+.escuro-icone{
+    display:none;
+    transition: 1.5s;
+}
 
