@@ -14,6 +14,7 @@ header{
     display:grid;
     grid-template-columns: repeat(12, 1fr);
     background-color: var(--cor-header_footer);
+    align-items: center;
     padding: 15px ;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
@@ -21,10 +22,10 @@ header{
     text-align: center;
     grid-column: 6/8;
     color: var(--cor-texto);
+     align-self: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size:  30px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    margin-right: 20px;
 }
 .menu{
     grid-column: 1/2;
@@ -42,6 +43,7 @@ header{
     grid-column: 10/11;
     background-color: transparent;
     color: var(--cor-texto);
+    justify-self: center;
     transition: 0.3s;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -120,16 +122,19 @@ footer {
 
 ul{
     height: 100%;
-    list-style-type: none;   
+    list-style-type: none;
+    padding: 22px;   
 }
 ul li.item_menu a{
     display: flex;
+    align-items: center;
     color: var(--cor-texto);
     text-decoration:none ;
     font-size: 20px;
     padding: 20px 1%;
     margin-bottom: 60px;
     line-height: 40px;
+    height: 50px;
     
 }
 ul li.item_menu a .texto_menu{
@@ -140,7 +145,8 @@ ul li.item_menu a .texto_menu{
 } 
 
 ul li.item_menu a .icon > i{
-    font-size: 30px;
+    font-size: 25px;
+    padding-right: 10px;
 }
 ul li.item_menu a{
     transition: .5s;
@@ -203,5 +209,9 @@ ul li.ativo {
 .escuro-icone{
     display:none;
     transition: 1.5s;
+}
+
+#home{
+
 }
 
