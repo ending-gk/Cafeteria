@@ -10,15 +10,43 @@
 </head>
 <body>
     <div class="fundo_cinza" id="fc"></div>
+
     <header>
             <h1 class="titulo"> Good Coffee </h1>
-            <button id='login' class = " btn btn-outline"> login </button>
+            <button id='login' class = "btn btn-outline" onclick="aparecer()"> login </button>
             <button class="tema" id="tema" onclick="mudartema()">
                 <span class="claro-icone" id="claro-icone"><i class="bi bi-sun" id="sol"></i></span>
                 <span class="escuro-icone" id="escuro-icone"><i class="bi bi-moon" id="lua"></i></span>
             </button>
     </header>
     <main>
+        <div class="fundo_cinza-login" id="fl">
+            <form class="form-login">
+                <h1 style="color:var(--cor-texto)" class="titulo-form">Faça o seu login!</h1>
+                <h3 style="color:var(--cor-texto)" class="desc-form"> Faça o seu login  no nosso site para ter acesso ao nosso cardápio
+                    e fazer seus pedidos
+                </h3>
+                    
+                        <button  class='x' type="button" onclick="fechar()">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    
+                
+                <label for="nome_de_usuario"></label>
+                <input class='usuario' type="text" id="nome_de_usuario" placeholder="Nome de Usuário">
+                
+                   
+                    <label for="senha"></label>
+                    <input class="senha" type="password" id="senha" placeholder="Senha">
+                
+                    <button class="login" onclick="login()">
+                        Login
+                    </button>
+                    <h5 class='texto-cad'> Não tem uma conta? sem problema crie uma </h5>
+                    <a  class='link-cad'href="Pages/cadastro.html">Cria Conta</a>
+                </div>
+            </form>
+        </div>
         <div class="container mt-5 mb-5" style="border-radius: 15;">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -49,6 +77,7 @@
         <p>2026 - Anny Maia, Davi Passos e Arthur Velasquez</p>
         <p>Nos conheça melhor em  <a class="saibamais" href="Pages/saiba_mais.html">Saiba Mais</a></p>
     </footer>
+<script src="JS/login.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="JS/menu.js"></script>
 <script src="JS/claro-escuro.js"></script>

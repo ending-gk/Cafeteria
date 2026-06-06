@@ -103,12 +103,11 @@ footer {
     width: 80px;    
     height: 100vh;    
     background-color: var(--cor-menu-lateral);
-
     padding: 40px 0 40px ;
     position: fixed;
     overflow: hidden;
     transition: 1s;
-    z-index: 1000;
+    z-index: 600;
     }
 .menu{
     width: 100%;
@@ -178,6 +177,8 @@ ul li.ativo {
 .fundo_cinza{
     display: none;
     position: fixed;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100vw;
@@ -211,8 +212,111 @@ ul li.ativo {
     display:none;
     transition: 1.5s;
 }
-
-#home{
-
+.fundo_cinza-login{
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 601;
+    background-color: rgba(49, 47, 47,0.5);
+}
+    
+.form-login{
+    display:flex;
+    position: relative;
+    height: 70vh;
+    width: 60vw;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cor-header_footer);
+}
+.x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--cor-texto);
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
 }
 
+.usuario{
+    position: absolute;
+    top: 200px;
+    background-color: transparent;
+    width: 70%;
+    height: 10%;
+    border-color: var(--cor-texto);
+    border-radius: 25px;
+    border-style: solid;
+}
+.usuario::placeholder{
+    font-family: Georgia;
+    padding-left: 10px;
+    color: var(--cor-texto);
+}
+.senha{
+    position: absolute;
+    background-color: transparent;
+    top: 300px;
+    width: 70%;
+    height: 10%;
+    border-color: var(--cor-texto);
+    border-radius: 25px;
+    border-style: solid;
+}
+.senha::placeholder{
+    font-family: Georgia;
+    padding-left: 10px;
+    color: var(--cor-texto);
+}
+.login{
+    position: absolute;
+    top: 400px;
+    width: 70%;
+    height: 10%;
+    font-family: Georgia;
+    background-color: transparent;
+    color:var(--cor-texto);
+    border-color: var(--cor-texto);
+    border-radius: 25px;
+    border-style: solid;
+}
+
+.login:hover{
+    background-color: var(--cor-texto);
+    color: var(--cor-saibamais);
+    border-color: var(--cor-saibamais);
+    border-radius:25px;
+}
+.titulo-form{
+    position: absolute;
+    font-family: Georgia;
+    top: 0;
+}
+.desc-form{
+    position: absolute;
+    top: 100px;
+    font-family: Georgia;
+}
+.texto-cad{
+    position: absolute;
+    top: 500px;
+    font-family: Georgia;
+    color: var(--cor-texto);
+}
+.link-cad{
+    position: absolute;
+    top: 550px;
+    font-family: Georgia;
+    color: var(--cor-saibamais);
+    font-size: 20px;
+    text-decoration: none;
+
+}
