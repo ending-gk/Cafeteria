@@ -211,6 +211,10 @@ ul li.ativo {
 .escuro-icone{
     display:none;
     transition: 1.5s;
+    color: var(--cor-texto);
+}
+.escuro-icone:hover{
+    color: black;
 }
 .fundo_cinza-login{
     display: none;
