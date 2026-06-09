@@ -1,3 +1,7 @@
+*{
+    transition: 1.5s;
+    transform:1.5s;
+}
 :root{
     --cor-header_footer:#c08856 ;
     --cor-menu-lateral:#a0714f;
@@ -7,12 +11,12 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color:var(--cor-body);
-    background: #f5ebe0;
+    
     min-height: 100vh;
 }
 
 header{
-    background: #c08856;
+    background: var(--cor-header_footer);
     color: var(--cor-texto);
     text-align: center;
     padding: 40px;
@@ -37,6 +41,7 @@ header p{
 }
 
 .cartao{
+    background:var(--cor-header_footer);
     color: var(--cor-texto);
     width: 300px;
     padding: 25px;
@@ -59,12 +64,12 @@ header p{
 }
 
 .cartao h2{
-    color: #6f4e37;
+    color: var(--cor-texto);
     margin-bottom: 10px;
 }
 
 .cartao p{
-    color: #555;
+    color: var(--cor-texto);
     line-height: 1.5;
 }
 
@@ -84,10 +89,10 @@ header p{
 
 
 footer{
-    background-color:  #c08856;
+    background:var(--cor-header_footer);
     color: var(--cor-texto);
-    bottom: 0%;
-    position:relative;
+    bottom: 0;
+    position: fixed;
     width:100%;
     text-align: center;
     padding: 25px;

@@ -1,0 +1,128 @@
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;    
+    height: 100vh;    
+    background-color: var(--cor-menu-lateral);
+    padding: 40px 0 40px ;
+    position: fixed;
+    overflow: hidden;
+    transition: 1s;
+    z-index: 600;
+    }
+.menu{
+    width: 100%;
+    padding-left: 10px;
+}   
+.menu>i{
+    color: var(--cor-texto);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    padding: 22px;   
+}
+ul li.item_menu {
+    height: 50px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+ul li.item_menu a{
+    display: flex;
+    align-items: center;
+    color: var(--cor-texto);
+    text-decoration:none ;
+    font-size: 20px;
+    line-height: 40px;
+    transition: .5s;
+    border-radius:10px;
+    
+}
+ul li.item_menu a .texto_menu{
+     margin-left: 70px;
+     transition: 1s;
+     opacity: 0;
+
+} 
+
+ul li.item_menu a .icon > i{
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+ul li.item_menu:hover a {
+    background-color: var(--cor-texto);
+    color: var(--cor-saibamais)
+    
+}
+.menu-lateral.expandir {
+    width: 300px;
+    
+}
+
+.menu-lateral.expandir  body{
+    background-color: gray;
+    
+}
+ul li.ativo {
+    background-color: var(--cor-texto);
+}
+.menu-lateral.expandir .texto_menu{
+    margin-left: 40px;
+    opacity: 1;
+
+}
+.fundo_cinza{
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    background-color: rgba(49, 47, 47,0.5);
+}
+.tema{
+    padding: 1px 1px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.tema i{
+    font-size: 25px;
+}
+.claro-icone{
+    display: block;
+    transition: 1.5s;
+
+}
+.escuro-icone{
+    display:none;
+    transition: 1.5s;
+    color: var(--cor-texto);
+}
+#sol{
+    color: var(--cor-texto);
+}
+
+#sol:hover{
+    color: var(--cor-saibamais);
+}
+
+#lua:hover{
+    color: var(--cor-saibamais);
+}

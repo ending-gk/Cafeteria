@@ -1,3 +1,7 @@
+*{
+    transition:1.5s;
+    transform:1.5s;
+}
 :root{
     --cor-header_footer:#c08856 ;
     --cor-menu-lateral:#a0714f;
@@ -14,7 +18,7 @@ header{
     color: var(--cor-texto);
     font-family: cursive;
     font-size:  30px;
-    background-color: #c08856;
+    background-color: var(--cor-header_footer);
     padding: 15px ;
 }
 
@@ -34,7 +38,7 @@ p{
 }
 
 footer {
-  background-color: #c08856;
+  background-color: var(--cor-header_footer);
   color: var(--cor-texto);
   font-size: 18px;
   text-align: center;
