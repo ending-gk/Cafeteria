@@ -1,0 +1,81 @@
+* {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+:root {
+    --cor-header_footer: #c08856;
+    --cor-menu-lateral: #a0714f;
+    --cor-saibamais: #6a3a20; 
+    --cor-texto: #fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-body);
+    min-height: 100vh;
+}
+
+.saibamais {
+    color: var(--cor-saibamais);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container-cardapio {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.secao-titulo {
+    color: var(--cor-saibamais);
+    border-bottom: 2px solid var(--cor-header_footer);
+    padding-bottom: 8px;
+    font-size: 24px;
+}
+
+.card-item {
+    background-color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-item .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-item .card-title {
+    color: var(--cor-saibamais);
+    font-weight: bold;
+}
+
+.card-item{
+    color: #555;
+    font-size: 14px;
+    height: 65px;
+    overflow: hidden;
+}
+
+
+.card-text {
+    color: #555;
+    font-size: 14px;
+    height: 65px;
+    overflow: hidden;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cor-menu-lateral);
+}
+
