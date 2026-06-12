@@ -1,3 +1,24 @@
+* {
+    transition: background-color 1.5s, color 1.5s;
+}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+:root{
+    --cor-header_footer:#c08856 ;
+    --cor-menu-lateral:#a0714f;
+    --cor-saibamais:#6a3a20;
+    --cor-texto:#fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
+header{
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--cor-header_footer);
+    align-items: center;
+    padding: 15px ;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
 .titulo{
     text-align: center;
     grid-column: 6/8;
@@ -34,9 +55,7 @@
     color: var(--cor-header_footer)
 }
 
-#tema{
-    grid-column: 12/13;
-}
+
 
 #tema:hover{
     background-color: var(--cor-texto);
@@ -108,6 +127,7 @@ main {
     justify-content: center;
     flex-direction: column;
     background-color: var(--cor-header_footer);
+
 }
 
 .x{
@@ -210,3 +230,16 @@ footer {
     padding: 15px 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+@media (max-width: 768px) {
+    .carousel,
+.carousel-inner,
+.carousel-item {
+    height : calc(100vh - 226px);
+    }
+    .carousel-item img {
+    height : calc(100vh - 226px);
+    }
+
+
+}
+

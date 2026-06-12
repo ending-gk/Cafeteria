@@ -46,10 +46,19 @@ fetch(caminho)
         else {
             document.getElementById('perfil').querySelector('a').href = 'Pages/perfil.html';
         }
+        const lista = document.getElementById('lista')
         const exp = document.getElementById("menu-id");
         const navm = document.getElementById("nav-menu");
         const fc = document.getElementById("fc");
+        lista.style.opacity==0
         exp.addEventListener('click', () => {
+            if(lista.style.opacity==0){
+                lista.style.opacity=1
+                }
+            else{
+                lista.style.opacity=0
+            }
+            
             navm.classList.toggle('expandir')
             if (navm.classList.contains("expandir")) {
                 fc.style.display = "block";
