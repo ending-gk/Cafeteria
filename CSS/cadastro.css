@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-header_footer: #c08856;
+    --cor-menu-lateral: #a0714f;
+    --cor-texto: #fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-body);
+    min-height: 100vh;
+}
+
+header{
+    background-color: var(--cor-header_footer);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 20px;
+}
+
+.xicara{
+    font-size: 180px;
+}
+.logo:hover{
+    cursor:default;
+}
+
+.formulario{
+    width: 380px;
+    background-color: var(--cor-texto);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.formulario h2{
+    text-align: center;
+    color: var(--cor-menu-lateral);
+    margin-bottom: 10px;
+}
+
+.formulario p{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+label{
+    display: block;
+    margin: 12px 0 5px;
+    color: var(--cor-menu-lateral);
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button{
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--cor-menu-lateral);
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--cor-header_footer);
+}
+
+footer{
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--cor-header_footer);
+    color:  var(--cor-texto);
+}
+
+footer p{
+    margin-bottom: 10px;
+}
+
+footer a{
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 800px){
+    .principal{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .xicara{
+        font-size: 120px;
+    }
+
+    .formulario{
+        width: 90%;
+    }
+}

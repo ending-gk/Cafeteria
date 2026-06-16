@@ -46,6 +46,7 @@ fetch(caminho)
         else {
             document.getElementById('perfil').querySelector('a').href = 'Pages/perfil.html';
         }
+        
         const lista = document.getElementById('lista')
         const exp = document.getElementById("menu-id");
         const navm = document.getElementById("nav-menu");
