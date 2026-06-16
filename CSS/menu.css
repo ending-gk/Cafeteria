@@ -129,6 +129,9 @@ ul li.ativo {
 #lua:hover{
     color: var(--cor-saibamais);
 }
+ul{
+    display:flex;
+}
 @media (max-width: 768px) {
     .menu-lateral{
         width: 30px;
@@ -138,6 +141,7 @@ ul li.ativo {
         padding-left: 1px;
     }
     ul{
-        opacity: 0;
+       display: none; 
+       opacity: 0;
     }
 }

@@ -96,12 +96,15 @@ main {
 .carousel-item {
     width: 100%;
     height: 100%;
+    flex: 1;
+    min-height: 0;
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+     display: block;
 }
 
 .fundo_cinza-login{
@@ -120,6 +123,7 @@ main {
 .form-login{
     display:flex;
     position: relative;
+    gap: 45px;
     height: 70vh;
     width: 60vw;
     border-radius: 10px;
@@ -141,8 +145,7 @@ main {
 }
 
 .usuario{
-    position: absolute;
-    top: 200px;
+  
     background-color: transparent;
     width: 70%;
     height: 10%;
@@ -158,9 +161,7 @@ main {
 }
 
 .senha{
-    position: absolute;
     background-color: transparent;
-    top: 300px;
     width: 70%;
     height: 10%;
     border-color: var(--cor-texto);
@@ -175,8 +176,6 @@ main {
 }
 
 .login{
-    position: absolute;
-    top: 400px;
     width: 70%;
     height: 10%;
     font-family: Georgia;
@@ -195,27 +194,20 @@ main {
 }
 
 .titulo-form{
-    position: absolute;
     font-family: Georgia;
     top: 0;
 }
 
 .desc-form{
-    position: absolute;
-    top: 100px;
     font-family: Georgia;
 }
 
 .texto-cad{
-    position: absolute;
-    top: 500px;
     font-family: Georgia;
     color: var(--cor-texto);
 }
 
 .link-cad{
-    position: absolute;
-    top: 550px;
     font-family: Georgia;
     color: var(--cor-saibamais);
     font-size: 20px;
@@ -225,21 +217,29 @@ main {
 footer {
     background-color: var(--cor-header_footer);
     color: var(--cor-texto);
+    height: 85px;
     font-size: 18px;
     text-align: center;
     padding: 15px 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .form-login {
+        width: 90vw;
+    }
     .carousel,
-.carousel-inner,
-.carousel-item {
-    height : calc(100vh - 226px);
+    .carousel-inner,
+    .carousel-item {
+        height: 70vh;
     }
+
     .carousel-item img {
-    height : calc(100vh - 226px);
+        object-fit: contain;
+        object-position: center center;
+        height: 70vh;
     }
-
-
+    body{
+        background-color: var(--cor-header_footer);
+    }
 }
 

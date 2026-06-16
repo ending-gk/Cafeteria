@@ -50,13 +50,16 @@ fetch(caminho)
         const exp = document.getElementById("menu-id");
         const navm = document.getElementById("nav-menu");
         const fc = document.getElementById("fc");
-        lista.style.opacity==0
+        lista.style.display='none'
+        lista.style.opacity=0
         exp.addEventListener('click', () => {
             if(lista.style.opacity==0){
                 lista.style.opacity=1
+                lista.style.display='block'
                 }
             else{
                 lista.style.opacity=0
+                lista.style.display='none'
             }
             
             navm.classList.toggle('expandir')
