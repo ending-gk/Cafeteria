@@ -41,7 +41,7 @@ header{
     color: var(--cor-header_footer)
 }
 
-#login{
+#login-s{
     grid-column: 12/13;
     background-color: transparent;
     color: var(--cor-texto);
@@ -50,7 +50,7 @@ header{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#login:hover{
+#login-s:hover{
     background-color: var(--cor-texto);
     color: var(--cor-header_footer)
 }
@@ -172,6 +172,13 @@ main {
 .senha::placeholder{
     font-family: Georgia;
     padding-left: 10px;
+    color: var(--cor-texto);
+}
+.usuario, .senha {
+    color: var(--cor-texto);
+}
+
+.usuario::placeholder, .senha::placeholder {
     color: var(--cor-texto);
 }
 

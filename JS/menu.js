@@ -46,23 +46,23 @@ fetch(caminho)
         else {
             document.getElementById('perfil').querySelector('a').href = 'Pages/perfil.html';
         }
-        
+
         const lista = document.getElementById('lista')
         const exp = document.getElementById("menu-id");
         const navm = document.getElementById("nav-menu");
         const fc = document.getElementById("fc");
-        lista.style.display='none'
-        lista.style.opacity=0
+        lista.style.display = 'none'
+        lista.style.opacity = 0
         exp.addEventListener('click', () => {
-            if(lista.style.opacity==0){
-                lista.style.opacity=1
-                lista.style.display='block'
-                }
-            else{
-                lista.style.opacity=0
-                lista.style.display='none'
+            if (lista.style.opacity == 0) {
+                lista.style.opacity = 1
+                lista.style.display = 'block'
             }
-            
+            else {
+                lista.style.opacity = 0
+                lista.style.display = 'none'
+            }
+
             navm.classList.toggle('expandir')
             if (navm.classList.contains("expandir")) {
                 fc.style.display = "block";
@@ -71,66 +71,72 @@ fetch(caminho)
                 fc.style.display = "none";
             }
         })
-        
-            const claro = document.getElementById("claro-icone")
-            const escuro = document.getElementById("escuro-icone")
-            const fe = document.getElementById('tema')
-            claro.style.display = 'block'
-            fe.addEventListener('click',mudartema)
-            function mudartema() {
-                if ((claro.style.display == "block")) {
-                    localStorage.setItem('fundo', 'escuro')
-                    claro.style.opacity = 0
-                    escuro.style.opacity = 1
-                    document.documentElement.style.setProperty('--cor-header_footer', '#1a1a1a')
-                    document.documentElement.style.setProperty('--cor-menu-lateral', '#2c2c2c')
-                    document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
-                    document.documentElement.style.setProperty('--cor-body', 'rgba(30, 20, 15, 0.95)')
-                    document.documentElement.style.setProperty('--cor-saibamais', '#c08856')
-                    escuro.style.display='block'
-                    claro.style.display = 'none'
-                }
 
-                else {
-                    localStorage.setItem('fundo', 'claro')
-                    claro.style.opacity = 1
-                    escuro.style.opacity = 0
-                    document.documentElement.style.setProperty('--cor-header_footer', '#c08856')
-                    document.documentElement.style.setProperty('--cor-menu-lateral', '#a0714f')
-                    document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
-                    document.documentElement.style.setProperty('--cor-body', 'rgba(206, 167, 140, 0.658)')
-                    document.documentElement.style.setProperty('--cor-saibamais', '#6a3a20')
-                    escuro.style.display='none'
-                    claro.style.display = 'block'
-
-                }
+        const claro = document.getElementById("claro-icone")
+        const escuro = document.getElementById("escuro-icone")
+        const fe = document.getElementById('tema')
+        claro.style.display = 'block'
+        fe.addEventListener('click', mudartema)
+        function mudartema() {
+            if ((claro.style.display == "block")) {
+                localStorage.setItem('fundo', 'escuro')
+                claro.style.opacity = 0
+                escuro.style.opacity = 1
+                document.documentElement.style.setProperty('--cor-header_footer', '#1a1a1a')
+                document.documentElement.style.setProperty('--cor-menu-lateral', '#2c2c2c')
+                document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
+                document.documentElement.style.setProperty('--cor-body', 'rgba(30, 20, 15, 0.95)')
+                document.documentElement.style.setProperty('--cor-saibamais', '#c08856')
+                escuro.style.display = 'block'
+                claro.style.display = 'none'
             }
-            
-                let cor = localStorage.getItem('fundo');
-                if (cor == 'escuro') {
-                    claro.style.opacity = 0
-                    escuro.style.opacity = 1
-                    document.documentElement.style.setProperty('--cor-header_footer', '#1a1a1a')
-                    document.documentElement.style.setProperty('--cor-menu-lateral', '#2c2c2c')
-                    document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
-                    document.documentElement.style.setProperty('--cor-body', 'rgba(30, 20, 15, 0.95)')
-                    document.documentElement.style.setProperty('--cor-saibamais', '#c08856')
-                    claro.style.display = "none"
-                    escuro.style.display = "block"
-                }
 
-                else {
-                    claro.style.opacity = 1
-                    escuro.style.opacity = 0
-                    document.documentElement.style.setProperty('--cor-header_footer', '#c08856')
-                    document.documentElement.style.setProperty('--cor-menu-lateral', '#a0714f')
-                    document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
-                    document.documentElement.style.setProperty('--cor-body', 'rgba(206, 167, 140, 0.658)')
-                    document.documentElement.style.setProperty('--cor-saibamais', '#6a3a20')
-                    claro.style.display = "block"
-                    escuro.style.display = "none"
-                }
-            
-        
+            else {
+                localStorage.setItem('fundo', 'claro')
+                claro.style.opacity = 1
+                escuro.style.opacity = 0
+                document.documentElement.style.setProperty('--cor-header_footer', '#c08856')
+                document.documentElement.style.setProperty('--cor-menu-lateral', '#a0714f')
+                document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
+                document.documentElement.style.setProperty('--cor-body', 'rgba(206, 167, 140, 0.658)')
+                document.documentElement.style.setProperty('--cor-saibamais', '#6a3a20')
+                escuro.style.display = 'none'
+                claro.style.display = 'block'
+
+            }
+        }
+
+        let cor = localStorage.getItem('fundo');
+        if (cor == 'escuro') {
+            claro.style.opacity = 0
+            escuro.style.opacity = 1
+            document.documentElement.style.setProperty('--cor-header_footer', '#1a1a1a')
+            document.documentElement.style.setProperty('--cor-menu-lateral', '#2c2c2c')
+            document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
+            document.documentElement.style.setProperty('--cor-body', 'rgba(30, 20, 15, 0.95)')
+            document.documentElement.style.setProperty('--cor-saibamais', '#c08856')
+            claro.style.display = "none"
+            escuro.style.display = "block"
+        }
+
+        else {
+            claro.style.opacity = 1
+            escuro.style.opacity = 0
+            document.documentElement.style.setProperty('--cor-header_footer', '#c08856')
+            document.documentElement.style.setProperty('--cor-menu-lateral', '#a0714f')
+            document.documentElement.style.setProperty('--cor-texto', '#f0e6d3')
+            document.documentElement.style.setProperty('--cor-body', 'rgba(206, 167, 140, 0.658)')
+            document.documentElement.style.setProperty('--cor-saibamais', '#6a3a20')
+            claro.style.display = "block"
+            escuro.style.display = "none"
+        }
+        window.onload = function () {
+            if (localStorage.getItem('usuarioLogado') != null) {
+                let sumir = document.getElementById('login-s');
+                sumir.style.display = 'none';
+            }
+        }
+
+
     });
 
