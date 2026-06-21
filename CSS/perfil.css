@@ -1,0 +1,51 @@
+* {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+:root {
+    --cor-header_footer: #c08856;
+    --cor-menu-lateral: #a0714f;
+    --cor-saibamais: #6a3a20; 
+    --cor-texto: #fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
+
+body {
+    background-color: var(--cor-body);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.arredondado_bloco {
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.caixa_perfil {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cartao_perfil {
+    background-color: var(--cor-texto);
+    border: none;
+}
+
+.objeto_foto {
+    width: 100%;
+    height: 100%;
+}
+
+.titulo_perfil {
+    color: var(--cor-saibamais);
+    font-weight: bold;
+}
+
+.icone_usuario {
+    font-size: 60px;
+    color: var(--cor-menu-lateral);
+}
+
+.texto_campo {
+    color: var(--cor-saibamais);
+    font-size: 14px;
+}
