@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../CSS/perfil.css">
     <link rel="stylesheet" href="../CSS/menu.css">
-    <link rel="icon" href="../img/cardapio.ico">
+    <link rel="icon" href="../img/perfil.ico">
     <title>Meu Perfil</title>
 </head>
 <body>
-
+    <div class="fundo_cinza-login" id="fl"></div>
     <main class="container-fluid vh-100 caixa_perfil">
+        
         <div class="row g-0 h-100 align-items-center justify-content-center">
             
             <div class="col-12 col-lg-10 h-80 d-flex align-items-center justify-content-center">
@@ -37,17 +38,23 @@
                                 <form>
                                     <div class="mb-3">
                                         <label class="form-label fw-bold texto_campo"><i class="bi bi-person"></i> Nome Completo</label>
-                                        <h2>dados dos usuários</h2>                                            
+                                        <h2 id="nome-u"></h2>                                            
+                                        <button id="bn" onclick="mudarnome()"> modificar nome</button >
                                     </div>
 
                                     <div class="mb-3 mt-5">
                                         <label class="form-label fw-bold texto_campo"><i class="bi bi-envelope"></i> E-mail</label>
-                                        <h3>usuario.teste@gmail.com</h3>
+                                        <h3 id="e-mail-u"></h3>
+                                        <button id="be" onclick="mudaremail()">modificar email</button>
                                     </div>
 
                                     <div class="mb-3 mt-5">
                                         <label class="form-label fw-bold texto_campo"><i class="bi bi-telephone"></i> Telefone / WhatsApp</label>
-                                        <h3>12 9 8765-4321</h3>
+                                        <h3 id="telefone-u"></h3>
+                                        <button id="bt" onclick="mudartelefone()">modificar  telefone</button>
+                                    </div>
+                                    <div>
+                                        <button id="bs" onclick="sair()">sair da conta</button>
                                     </div>
                                 </form>
                             </div>
@@ -62,7 +69,7 @@
     <div class="fundo_cinza" id="fc"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../JS/claro-escuro.js"></script>
     <script src="../JS/menu.js"></script>
+    <script src="../JS/perfil.js"></script>
 </body>
 </html>

@@ -49,3 +49,42 @@ body {
     color: var(--cor-saibamais);
     font-size: 14px;
 }
+#bn,#be,#bt{
+    background-color: var(--cor-saibamais);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(106, 58, 32, 0.15);
+    transition: all 0.3s ease;
+}
+#bt:hover {
+    background-color: #4a2814;
+    color: var(--cor-texto);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(106, 58, 32, 0.25);
+}
+#bn:hover {
+    background-color: #4a2814;
+    color: var(--cor-texto);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(106, 58, 32, 0.25);
+}
+#be:hover {
+    background-color: #4a2814;
+    color: var(--cor-texto);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(106, 58, 32, 0.25);
+}
+#bs{
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    padding: 6px 16px;
+    margin-top: 60px;
+    width: 200px;
+}
