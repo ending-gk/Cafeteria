@@ -153,3 +153,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(106, 58, 32, 0.3);
 }
+
+.itens_selecionados{
+    background-color: var(--cor-texto);
+}
