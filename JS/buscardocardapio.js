@@ -58,9 +58,6 @@ function criarCard(item, index) {
 
                     <div class="d-flex justify-content-between align-items-center mt-3">
                         <span class="preco card_preco">${item.card_preco}</span>
-                        <button class="btn btn_adicionar" onclick="adicionar(${index})">
-                            Adicionar
-                        </button>
                     </div>
                 </div>
             </div>

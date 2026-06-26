@@ -15,17 +15,7 @@
         
         <div class="row g-4 mx-0 w-100 flex-grow-1">
             
-            <div class="col-12 col-lg-8">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-12 col-md-6">
-                        <div class="input-group">
-                            <span class="input-group-text bg-white border-end-0 text-muted">
-                                <i class="bi bi-search"></i>
-                            </span>
-                            <input type="text" class="form-control border-start-0 ps-0" id="buscar-item" placeholder="Buscar cupons...">
-                        </div>
-                    </div>
-                </div>
+            <div class="col-12 col-lg-8" id="container">
 
                 <div class="mt-4">
                     <h4 class="mb-3 menu_subtitulo" style="color: aliceblue;">Cupons Disponíveis</h4>
@@ -34,11 +24,10 @@
                             <div class="card card_cupom text-center">
                                 <div class="card-body">
                                     <div class="cupom_icone mb-2">
-                                        <i class="bi bi-ticket-perforated"></i>
+                                       <i class="bi bi-balloon"></i>
                                     </div>
-                                    <h5 class="cupom_codigo mb-1">CAFEMAIS</h5>
-                                    <p class="card-text text-muted small mb-3">10% de desconto na primeira compra</p>
-                                    <button class="btn btn_cupom btn-sm w-100" onclick="copiarCupom('CAFEMAIS')">Copiar Código</button>
+                                    <h5 class="cupom_codigo mb-1">Festa em Minas</h5>
+                                    <p class="card-text text-muted small mb-3">10% de desconto se comprar o pão de queijo mineiro</p>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +39,6 @@
                                     </div>
                                     <h5 class="cupom_codigo mb-1">GRATISCOFFEE</h5>
                                     <p class="card-text text-muted small mb-3">Entrega grátis para pedidos acima de R$ 30</p>
-                                    <button class="btn btn_cupom btn-sm w-100" onclick="copiarCupom('GRATISCOFFEE')">Copiar Código</button>
                                 </div>
                             </div>
                         </div>
@@ -67,6 +55,7 @@
                             <div class="card-body p-4">
                                 <h5 class="mb-4">Expresso Tradicional</h5>
                                 <p class="card-text">Extraído na hora, encorpado e com crema densa.</p>
+                                <button class="ba" onclick="add('Expresso Tradicional')">adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -81,6 +70,7 @@
                             <div class="card-body p-4">
                                 <h5 class="mb-4">Cappuccino Italiano</h5>
                                 <p class="card-text">Equilíbrio perfeito entre expresso, leite vaporizado e canela.</p>
+                                 <button class="ba" onclick="add('Cappuccino Italiano')">adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -95,6 +85,7 @@
                             <div class="card-body p-4">
                                 <h5 class="mb-4">Expresso Descafeinado</h5>
                                 <p class="card-text">Todo o sabor e aroma do café tradicional, sem cafeína.</p>
+                                <button class="ba" onclick="add('Expresso Descafeinado')">adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -109,6 +100,7 @@
                             <div class="card-body p-4">
                                 <h5 class="mb-4">Pão de Queijo Mineiro</h5>
                                 <p class="card-text">Receita artesanal com queijo canastra, servido quentinho.</p>
+                                <button class="ba" onclick="add('Pão de Queijo Mineiro')">adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -123,6 +115,7 @@
                             <div class="card-body p-4">
                                 <h5 class="mb-4">Croissant de Manteiga</h5>
                                 <p class="card-text">Massa folhada francesa super crocante e amanteigada.</p>
+                                <button class="ba" onclick="add('Croissant de Manteiga')">adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -137,6 +130,7 @@
                             <div class="card-body p-4">
                                 <h5 class="mb-4">Cookie Double Chocolate</h5>
                                 <p class="card-text">Bolachinha sabor chocolate com pedaços de chocolate ao leite.</p>
+                                <button class="ba" onclick="add('Cookie Double Chocolate')">adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -153,13 +147,13 @@
                             <div class="mb-4">
                                 <label class="form-label text-muted small fw-bold">POSSUI UM CUPOM?</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="input-cupom" placeholder="Inserir cupom...">
+                                    <input type="text" class="form-control" id="input-cupom" placeholder="Inserir o código do cupom">
                                     <button class="btn btn_aplicar" type="button" onclick="aplicarCupom()">Aplicar</button>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-between mb-2">
-                                <span class="text-muted">Subtotal</span>
+                                <span class="text-muted" >Subtotal</span>
                                 <span class="fw-bold text-dark" id="resumo-subtotal">R$ 0,00</span>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
@@ -176,7 +170,7 @@
                                 <span class="fw-bold h5 mb-0 valor_total" id="resumo-total">R$ 0,00</span>
                             </div>
                         </div>
-
+                        <div id="lista-carrinho"></div>
                         <button class="btn btn_finalizar w-100 py-2 mt-auto" onclick="finalizarPedido()">Finalizar Compra</button>
                     </div>
                 </div>
