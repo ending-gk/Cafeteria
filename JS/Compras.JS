@@ -84,7 +84,6 @@ function somar() {
         preco = preco.replace(',', '.')
         preco = parseFloat(preco);
         soma += preco;
-
     }
     subtotal = document.getElementById('resumo-subtotal');
     subtotal.textContent = "R$ " + soma.toFixed(2);
@@ -100,23 +99,27 @@ function aplicarCupom() {
     }
     else{
         let carrinho = JSON.parse(localStorage.getItem('carrinho_v'))
-    codigo = document.getElementById('input-cupom').value
-    for (let i = 0; i < cupons.length; i++) {
-        if (codigo == cupons[i].cupon_codigo) {
-            if(cupons[i].cupon_nome=='festa_em_mminas'){
-            for (let c = 0; c < carrinho.length; c++) {
-                if (carrinho[c].card_titulo == 'Pão de Queijo Mineiro') {
-                    const desconto = total / 10;
-                    total = total - desconto;
-                    descontoa = document.getElementById('resumo-desconto');
-                    descontoa.textContent = "R$ " + desconto.toFixed(2);
-                    totala = document.getElementById('resumo-total');
-                    totala.textContent = "R$ " + total.toFixed(2);
-                    cupomAplicado=true
+        codigo = document.getElementById('input-cupom').value
+        let achouCupom = false
+
+        for (let i = 0; i < cupons.length; i++) {
+            if (codigo == cupons[i].cupon_codigo) {
+                achouCupom = true
+
+                if(cupons[i].cupon_nome=='festa_em_mminas'){
+                    for (let c = 0; c < carrinho.length; c++) {
+                        if (carrinho[c].card_titulo == 'Pão de Queijo Mineiro') {
+                            const desconto = total / 10;
+                            total = total - desconto;
+                            descontoa = document.getElementById('resumo-desconto');
+                            descontoa.textContent = "R$ " + desconto.toFixed(2);
+                            totala = document.getElementById('resumo-total');
+                            totala.textContent = "R$ " + total.toFixed(2);
+                            cupomAplicado=true
+                        }
+                    }
                 }
-            }
-    }
-            }
+
                 if (cupons[i].cupon_nome == 'gratiscoffe') {
                     if (total > 30) {
                         total = total - 5;
@@ -125,15 +128,19 @@ function aplicarCupom() {
                         z=0
                         entregaa=document.getElementById('resumo-entrega');
                         entregaa.textContent= "R$ " + z.toFixed(2);
+                        cupomAplicado=true
                     }
                     else {
                         alert('o valor do pedido dever ser maior do que 30 Reais');
                     }
                 }
-            
+            }
+        }
+
+        if (achouCupom == false) {
+            alert('esse cupom não existe')
         }
     }
-
 }
 function addi(){
     let carrinho = JSON.parse(localStorage.getItem('carrinho_v'))
