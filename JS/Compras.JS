@@ -138,7 +138,7 @@ function aplicarCupom() {
         }
 
         if (achouCupom == false) {
-            alert('esse cupom não existe')
+            alert('voce não digitou nenhum cupom ou o cupom digitado não exite')
         }
     }
 }
@@ -161,4 +161,18 @@ function remover(nome){
             addi();
         }
     }
+}
+function finalizarPedido() {
+    let lista = document.getElementById('lista-carrinho');
+    
+    if (lista.innerHTML.trim() === '') {
+        alert('faça um pedido primeiro');
+    } 
+    else {
+        alert('pedido realizado com sucesso');
+        lista.innerHTML = '';
+        localStorage.removeItem('carrinho_v')
+        location.reload()
+    }
+    
 }

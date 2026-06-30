@@ -40,6 +40,9 @@ function poslogin() {
 poslogin()
 function mudarnome() {
     let nn = prompt('escreva seu novo nome aqui');
+    if(nn === null){
+        return;
+    }
     for (let i = 0; i < listaU.length; i++) {
         if (nn == listaU[i].nome) {
             alert('nome já existente');
@@ -67,6 +70,9 @@ function mudarnome() {
 }
 function mudaremail() {
     let en = prompt('digite seu novo email aqui');
+    if(nn === null){
+        return;
+    }
     emailu.textContent = en;
     for (let i = 0; i < listaU.length; i++) {
         if (nomeLog == listaU[i].nome) {
@@ -78,7 +84,11 @@ function mudaremail() {
 }
 function mudartelefone() {
     let tn = prompt('digite seu novo telefone aqui');
-    emailu.textContent = tn;
+    if(nn === null){
+        return;
+    }
+    if(typeof tn == "number" ){
+        emailu.textContent = tn;
     for (let i = 0; i < listaU.length; i++) {
         if (nomeLog == listaU[i].nome) {
             listaU[i].telefone = tn;
@@ -86,6 +96,10 @@ function mudartelefone() {
             break;
 
         }
+    }
+    }
+    else{
+        alert('só é possivel numeros no seu telefone por favor digite no formato (XX)XXXXX-XXXX')
     }
 
 }
