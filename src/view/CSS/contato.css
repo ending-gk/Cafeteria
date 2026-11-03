@@ -19,17 +19,17 @@ header{
     background: var(--cor-header_footer);
     color: var(--cor-texto);
     text-align: center;
-    padding: 40px;
+    align-items: center;
+    padding: 2px;
 }
 
 header h1{
-    margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 30px;
+    padding-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
-header p{
-    font-size: 18px;
-}
 
 .contatos{
     display: flex;
