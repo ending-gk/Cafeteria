@@ -5,7 +5,7 @@ const telefone = document.getElementById('telefone');
 const senha = document.getElementById('senha');
 const confirmar_senha = document.getElementById('confirmar_senha');
 form.addEventListener('submit', validacao);
-function validacao(event) {
+async function validacao(event) {
     event.preventDefault();
     if (nome.value == '' || email.value == '' || telefone.value == '' || senha.value == '' || confirmar_senha.value == '') {
         alert('Preencha todos os campos para fazer o seu cadastro!')
@@ -30,6 +30,7 @@ function validacao(event) {
         telefone: telefone.value,
         senha: senha.value
     }
+
     let usuarios;
     if (localStorage.getItem('usuarios') == null) {
         usuarios = []
@@ -46,11 +47,24 @@ function validacao(event) {
 
 
     }
+    const resposta = await fetch ('http://localhost:3000/cadastro',{
+    method:'POST',
+    headers:{
+        'Content-type': 'application/json'
+    },
+    body:JSON.stringify(usuario_novo)
+
+});
+if(!resposta.ok){
+    alert('erro aoi realizar cadastro!')
+    return;
+}
+
     usuarios.push(usuario_novo)
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
     alert('Cadastro concluido com sucesso');
     localStorage.setItem('usuarioLogado', usuario_novo.nome);
     window.location.href = '../../index.html';
     
-
+    
 }
