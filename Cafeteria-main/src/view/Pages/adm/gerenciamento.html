@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../CSS/gerenciamento.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+
+    <title>Gerenciamento - Good Coffee</title>
+</head>
+
+<body>
+
+    <div class="fundo_cinza" id="fc"></div>
+    <div id="conteudo-menu"></div>
+
+    <header>
+        <h1 class="titulo">Good Coffee</h1>
+    </header>
+
+    <main class="container-fluid" style="padding-left: 100px;">
+        <h2 class="titulo-secao">Painel do Administrador</h2>
+        <p class="descricao">Gerencie os produtos e acompanhe os pedidos da cafeteria. (MUDAR TODAS AS INFORMAÇÕES PARA COLOCAR O BANCO DE DADOSSSSSSS)</p>
+
+        <div class="row g-4 align-items-start">
+
+            <div class="col-12 col-lg-4">
+
+                <h4 class="subtitulo" id="titulo-form">Cadastrar produto</h4>
+
+                <div class="card formulario">
+                    <div class="card-body">
+
+                        <form id="form-produto">
+
+                            <input type="hidden" id="produto-id">
+
+                            <label class="form-label">Nome do produto</label>
+                            <input type="text" id="nome" class="form-control mb-3" placeholder="Nome do produto" required>
+
+                            <label class="form-label">Descrição</label>
+                            <textarea id="descricao" class="form-control mb-3" rows="3" placeholder="Descrição do produto" required></textarea>
+
+                            <label class="form-label">Preço</label>
+                            <input type="number" id="preco" class="form-control mb-3" placeholder="0,00" step="0.01" min="0" required>
+
+                            <label class="form-label">Caminho da imagem</label>
+                            <input type="text" id="imagem" class="form-control mb-3" placeholder="Ex: ../../img/cafe.jpeg">
+
+                            <button type="submit" class="btn adicionar w-100" id="btn-salvar">
+                                <i class="bi bi-plus-circle"></i> Cadastrar produto
+                            </button>
+
+                            <button type="button" class="btn cancelar w-100 mt-2" id="btn-cancelar" onclick="cancelarEdicao()" style="display:none;">
+                                Cancelar edição
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <h4 class="subtitulo">Produtos da loja</h4>
+                <div id="lista-produtos">
+
+                    <div class="card produto mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-md-3">
+                                <img src="../../img/cafe.jpeg" class="imagem-produto" alt="Expresso Tradicional">
+                            </div>
+                            <div class="col-8 col-md-9">
+                                <div class="card-body">
+                                    <h5>Expresso Tradicional</h5>
+                                    <p>Extraído na hora, encorpado e com crema densa.</p>
+                                    <strong>R$ 8,00</strong>
+                                    <div class="botoes">
+                                        <button class="btn editar" onclick="editarProduto(0)">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </button>
+                                        <button class="btn excluir" onclick="excluirProduto(0)">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card produto mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-md-3">
+                                <img src="../../img/expresso.jpeg" class="imagem-produto" alt="Cappuccino Italiano">
+                            </div>
+                            <div class="col-8 col-md-9">
+                                <div class="card-body">
+                                    <h5>Cappuccino Italiano</h5>
+                                    <p>Equilíbrio perfeito entre expresso, leite vaporizado e canela.</p>
+                                    <strong>R$ 12,00</strong>
+                                    <div class="botoes">
+                                        <button class="btn editar" onclick="editarProduto(1)">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </button>
+                                        <button class="btn excluir" onclick="excluirProduto(1)">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card produto mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-md-3">
+                                <img src="../../img/descafeinado.jpeg" class="imagem-produto" alt="Expresso Descafeinado">
+                            </div>
+                            <div class="col-8 col-md-9">
+                                <div class="card-body">
+                                    <h5>Expresso Descafeinado</h5>
+                                    <p>Todo o sabor e aroma do café tradicional, sem cafeína.</p>
+                                    <strong>R$ 9,00</strong>
+                                    <div class="botoes">
+                                        <button class="btn editar" onclick="editarProduto(2)">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </button>
+                                        <button class="btn excluir" onclick="excluirProduto(2)">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card produto mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-md-3">
+                                <img src="../../img/pao_queijo.jpg" class="imagem-produto" alt="Pão de Queijo Mineiro">
+                            </div>
+                            <div class="col-8 col-md-9">
+                                <div class="card-body">
+                                    <h5>Pão de Queijo Mineiro</h5>
+                                    <p>Receita artesanal com queijo canastra, servido quentinho.</p>
+                                    <strong>R$ 7,00</strong>
+                                    <div class="botoes">
+                                        <button class="btn editar" onclick="editarProduto(3)">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </button>
+                                        <button class="btn excluir" onclick="excluirProduto(3)">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card produto mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-md-3">
+                                <img src="../../img/Croissant.jpeg" class="imagem-produto" alt="Croissant">
+                            </div>
+                            <div class="col-8 col-md-9">
+                                <div class="card-body">
+                                    <h5>Croissant de Manteiga</h5>
+                                    <p>Massa folhada francesa super crocante e amanteigada.</p>
+                                    <strong>R$ 10,00</strong>
+                                    <div class="botoes">
+                                        <button class="btn editar" onclick="editarProduto(4)">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </button>
+                                        <button class="btn excluir" onclick="excluirProduto(4)">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card produto mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-md-3">
+                                <img src="../../img/cookie.jpeg" class="imagem-produto" alt="Cookie Double Chocolate">
+                            </div>
+                            <div class="col-8 col-md-9">
+                                <div class="card-body">
+                                    <h5>Cookie Double Chocolate</h5>
+                                    <p>Bolachinha sabor chocolate com pedaços de chocolate ao leite.</p>
+                                    <strong>R$ 8,00</strong>
+                                    <div class="botoes">
+                                        <button class="btn editar" onclick="editarProduto(5)">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </button>
+                                        <button class="btn excluir" onclick="excluirProduto(5)">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="historico mt-5">
+            <h4 class="subtitulo">Histórico de compras</h4>
+            <p class="descricao">Acompanhe os últimos pedidos realizados na loja.</p>
+            <div class="table-responsive card tabela-card">
+                <table class="table table-hover align-middle mb-0">
+
+                    <thead>
+                        <tr>
+                            <th>Pedido</th>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Produtos</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Maria Silva</td>
+                            <td>20/11/2026</td>
+                            <td>Expresso Tradicional</td>
+                            <td>R$ 13,00</td>
+                            <td><span class="status entregue">Entregue</span></td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>João Santos</td>
+                            <td>21/11/2026</td>
+                            <td>Cappuccino Italiano</td>
+                            <td>R$ 12,00</td>
+                            <td><span class="status preparando">Preparando</span></td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Ana Oliveira</td>
+                            <td>22/11/2026</td>
+                            <td>Cookie Double Chocolate</td>
+                            <td>R$ 13,00</td>
+                            <td><span class="status entregue">Entregue</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 - Anny Maia, Davi Passos e Arthur Velasquez</p>
+        <p>Good Coffee - Gerenciamento da Loja</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../models/menuadm.js"></script>
+    <script src="../../../models/gerenciamento.js"></script>
+
+</body>
+</html>

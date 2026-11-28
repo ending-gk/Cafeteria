@@ -1,0 +1,47 @@
+*{
+    transition:1.5s;
+    transform:1.5s;
+}
+:root{
+    --cor-header_footer:#c08856 ;
+    --cor-menu-lateral:#a0714f;
+    --cor-texto:#fff;
+    --cor-body: rgba(206, 167, 140, 0.658);
+}
+body{
+    background-color:var(--cor-body);
+}
+
+header{
+    text-align: center;
+    grid-column: 7/8;
+    color: var(--cor-texto);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:  30px;
+    background-color: var(--cor-header_footer);
+    padding:2px ;
+}
+
+.card_fundo{
+    background-color: beige;
+}
+
+h4, h5{
+    color: var(--cor-texto);
+    font-family: cursive;
+}
+
+p{
+    font-size: 18px;
+    font-family: serif;
+    color: #e9dede;
+}
+
+footer {
+  background-color: var(--cor-header_footer);
+  color: var(--cor-texto);
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 0;
+  font-family: initial;
+}

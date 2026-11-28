@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../CSS/cardapio.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="icon" href="../img/cardapio.ico">
+    <title>Cardápio</title>
+</head>
+<body>
+    <main class="container-fluid py-5 menu-container" style="padding-left: 100px; padding-right: 20px;">
+        <h2 class="text-center mb-4" style="color: aliceblue;">Nosso Cardápio</h2>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0 text-muted">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0" id="buscar-item" placeholder="Buscar no cardápio...">
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mb-4 menu-subtitulo" style="color: aliceblue;">Cafés:</h3>
+        <div class="row g-4 mb-5" id="lista-cafes"></div>
+
+        <h3 class="mb-4 menu-subtitulo" style="color: aliceblue;">Acompanhamentos:</h3>
+        <div class="row g-4" id="lista-acompanhamentos"></div>
+
+    </main>
+
+    <div class="fundo_cinza" id="fc"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../models/menu.js"></script>
+    <script src="../../models/buscardocardapio.js"></script>
+</body>
+</html>
